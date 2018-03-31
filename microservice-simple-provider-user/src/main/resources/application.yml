@@ -1,0 +1,18 @@
+server:
+  port: 7900
+spring:
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  datasource:
+    platform: h2
+    schema: classpath:schema.sql #defalut schema.sql
+    data: classpath:data.sql 
+logging:
+  level:
+    root: info
+    org.hibernate.type.descriptor.sql.BasicBinder: trace #与show-sql 结合打印参数
+    org.hibernate.type.descriptor.sql.BasicExtractor: trace #与show-sql 结合打印参数
+ 
